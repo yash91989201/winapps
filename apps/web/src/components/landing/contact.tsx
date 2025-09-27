@@ -1,8 +1,32 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useState } from "react";
 
 export function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const mailtoLink = `mailto:sales@winapps.co.in?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    )}`;
+    
+    window.location.href = mailtoLink;
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value
+    });
+  };
   return (
     <section id="contact" className="py-20 bg-white relative">
       {/* Shapes */}
@@ -123,7 +147,7 @@ export function Contact() {
 
           {/* Contact Form */}
           <div className="p-6 md:p-8 rounded-lg bg-gray-50 shadow-md">
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <Label htmlFor="name">Name</Label>
@@ -131,6 +155,9 @@ export function Contact() {
                     type="text"
                     id="name"
                     placeholder="John Doe"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
                 <div>
@@ -139,6 +166,9 @@ export function Contact() {
                     type="email"
                     id="email"
                     placeholder="john.doe@example.com"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
               </div>
@@ -149,6 +179,9 @@ export function Contact() {
                   type="text"
                   id="subject"
                   placeholder="Subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
                 />
               </div>
 
@@ -158,6 +191,9 @@ export function Contact() {
                   placeholder="Message"
                   rows={4}
                   id="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
                   className="w-full px-3 py-2 border border-input bg-background rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-ring"
                 />
               </div>

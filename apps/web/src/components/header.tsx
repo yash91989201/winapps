@@ -1,14 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { Button, buttonVariants } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -51,7 +42,19 @@ export default function Header() {
       )}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-2 group">
+          <Link 
+            to="/" 
+            className="flex items-center gap-2 group"
+            onClick={(e) => {
+              if (window.location.pathname === "/") {
+                e.preventDefault();
+                const heroSection = document.getElementById("hero");
+                if (heroSection) {
+                  heroSection.scrollIntoView({ behavior: "smooth" });
+                }
+              }
+            }}
+          >
             <div className="relative overflow-hidden rounded-lg">
               <img 
                 src="/header-logo.gif" 
@@ -71,43 +74,44 @@ export default function Header() {
             <span className="font-bold text-xl group-hover:text-2xl transition-all duration-300">Winapps</span>
           </Link>
 
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">Home</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  {homeLinks.map(({ to, label }) => (
-                    <NavigationMenuLink
-                      key={to}
-                      className={cn(
-                        buttonVariants({ variant: "ghost", size: "lg" }),
-                        "w-full items-start"
-                      )}
-                      onClick={() => scrollToSection(to)}
-                    >
-                      {label}
-                    </NavigationMenuLink>
-                  ))}
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <Link to="/about" className={cn(
-                  navigationMenuTriggerStyle(), "bg-transparent"
-                )}>
-                  About Us
-                </Link>
-              </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <Link to="/training" className={cn(
-                  navigationMenuTriggerStyle(), "bg-transparent"
-                )}>
-                  Training
-                </Link>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+          <nav className="hidden md:flex items-center gap-6">
+            <button
+              onClick={() => scrollToSection("#about")}
+              className="font-medium text-foreground/80 hover:text-primary transition-colors"
+            >
+              About
+            </button>
+            <button
+              onClick={() => scrollToSection("#services")}
+              className="font-medium text-foreground/80 hover:text-primary transition-colors"
+            >
+              Services
+            </button>
+            <button
+              onClick={() => scrollToSection("#technologies")}
+              className="font-medium text-foreground/80 hover:text-primary transition-colors"
+            >
+              Technologies
+            </button>
+            <button
+              onClick={() => scrollToSection("#contact")}
+              className="font-medium text-foreground/80 hover:text-primary transition-colors"
+            >
+              Contact
+            </button>
+            <Link
+              to="/about"
+              className="font-medium text-foreground/80 hover:text-primary transition-colors"
+            >
+              About Us
+            </Link>
+            <Link
+              to="/training"
+              className="font-medium text-foreground/80 hover:text-primary transition-colors"
+            >
+              Training
+            </Link>
+          </nav>
 
           <div className="md:hidden">
             <Button

@@ -10,7 +10,7 @@ import {
 
 export function Hero() {
   return (
-    <section className="relative bg-white text-gray-900 py-20 min-h-screen flex items-center">
+    <section id="hero" className="relative bg-white text-gray-900 py-20 min-h-screen flex items-center">
       <div className="container mx-auto px-4 z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">

@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Hero } from "@/components/landing/hero";
+import { TrainingHero } from "@/components/training/training-hero";
 import { TrainingCourses } from "@/components/training/training-courses";
 
 export const Route = createFileRoute("/training")({
@@ -9,7 +9,7 @@ export const Route = createFileRoute("/training")({
 function TrainingComponent() {
   return (
     <div className="min-h-screen">
-      <Hero />
+      <TrainingHero />
       <TrainingCourses />
     </div>
   );
