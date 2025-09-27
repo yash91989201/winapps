@@ -41,7 +41,7 @@ export function Pricing() {
   const [billingCycle, setBillingCycle] = useState("monthly");
 
   return (
-    <section className="py-20 bg-gray-100">
+    <section id="pricing" className="py-20 bg-gray-100 relative">
       {/* Section Title */}
       <div className="container mx-auto px-4 mb-12">
         <div className="text-center max-w-3xl mx-auto">
@@ -74,11 +74,11 @@ export function Pricing() {
 
       {/* Pricing Table */}
       <div className="container mx-auto px-4 max-w-5xl">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8">
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className={`p-8 rounded-lg border bg-white shadow-md ${plan.popular ? "border-primary" : "border-gray-200"}`}>
+              className={`p-6 md:p-8 rounded-lg border bg-white shadow-md ${plan.popular ? "border-primary" : "border-gray-200"}`}>
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
@@ -93,7 +93,7 @@ export function Pricing() {
               </h4>
 
               <div className="text-center mb-6">
-                <h2 className="text-4xl font-bold text-gray-800">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
                   ${" "}
                   {billingCycle === "monthly"
                     ? plan.monthlyPrice
@@ -109,11 +109,10 @@ export function Pricing() {
               </p>
 
               <Button
-                className={`w-full mb-8 ${
-                  plan.popular
-                    ? "bg-primary hover:bg-primary/90"
-                    : "bg-gray-200 hover:bg-gray-300 text-gray-800"
-                }`}>
+                className={`w-full mb-8 ${plan.popular
+                  ? "bg-primary hover:bg-primary/90"
+                  : "bg-gray-200 hover:bg-gray-300 text-gray-800"
+                  }`}>
                 Try for free
               </Button>
 
@@ -146,6 +145,27 @@ export function Pricing() {
           ))}
         </div>
       </div>
+      {/* Shapes */}
+      <img
+        src="/images/shape-13.svg"
+        alt="shape"
+        className="absolute top-10 left-10 w-12 h-12 opacity-30 z-0 lg:top-20 lg:left-20 lg:w-16 lg:h-16"
+      />
+      <img
+        src="/images/shape-14.svg"
+        alt="shape"
+        className="absolute top-10 right-10 w-10 h-10 opacity-30 z-0 lg:top-20 lg:right-20 lg:w-14 lg:h-14"
+      />
+       <img
+        src="/images/shape-15.svg"
+        alt="shape"
+        className="absolute bottom-10 left-10 w-14 h-14 opacity-30 z-0 lg:bottom-20 lg:left-20 lg:w-18 lg:h-18"
+      />
+      <img
+        src="/images/shape-16.svg"
+        alt="shape"
+        className="absolute bottom-10 right-10 w-12 h-12 opacity-30 z-0 lg:bottom-20 lg:right-20 lg:w-16 lg:h-16"
+      />
     </section>
   );
 }

@@ -12,18 +12,18 @@ import {
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import "@/styles/index.css";
 
-export interface RouterAppContext {}
+export interface RouterAppContext { }
 
 export const Route = createRootRouteWithContext<RouterAppContext>()({
   component: RootComponent,
   head: () => ({
     meta: [
       {
-        title: "winapps",
+        title: "Winapps",
       },
       {
         name: "description",
-        content: "winapps is a web application",
+        content: "Our moto is to 'Materialize Concepts'. Ideas are put into reality with a team of not only efficient dedicated persons but also of positive attitude professionals.",
       },
     ],
     links: [
@@ -45,7 +45,7 @@ function RootComponent() {
       <HeadContent />
       <ThemeProvider
         attribute="class"
-        defaultTheme="dark"
+        defaultTheme="light"
         disableTransitionOnChange
         storageKey="vite-ui-theme"
       >

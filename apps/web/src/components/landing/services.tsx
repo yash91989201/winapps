@@ -1,45 +1,45 @@
 const services = [
   {
-    icon: "/icons/startup.svg",
-    title: "Crafted for Startups",
+    icon: "/images/icon-04.svg",
+    title: "Web Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Custom web applications built with modern technologies like React, Next.js, and .NET to deliver scalable and performant solutions.",
   },
   {
-    icon: "/icons/design.svg",
-    title: "High-quality Design",
+    icon: "/images/icon-05.svg",
+    title: "UI/UX Design",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Beautiful and intuitive user interfaces designed with user experience in mind, ensuring engagement and conversion.",
   },
   {
-    icon: "/icons/sections.svg",
-    title: "All Essential Sections",
+    icon: "/images/icon-06.svg",
+    title: "Mobile Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Native and cross-platform mobile applications for iOS and Android using React Native and Flutter frameworks.",
   },
   {
-    icon: "/icons/speed.svg",
-    title: "Speed Optimized",
+    icon: "/images/icon-07.svg",
+    title: "Digital Marketing",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Comprehensive digital marketing strategies including SEO, social media marketing, and content creation to grow your business.",
   },
   {
-    icon: "/icons/customize.svg",
-    title: "Fully Customizable",
+    icon: "/images/icon-05.svg",
+    title: "Cloud Solutions",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Scalable cloud infrastructure and deployment solutions using AWS, Azure, and Google Cloud for optimal performance.",
   },
   {
-    icon: "/icons/updates.svg",
-    title: "Regular Updates",
+    icon: "/images/icon-07.svg",
+    title: "AI Solutions",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.",
+      "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and computer vision to automate processes and drive innovation.",
   },
 ];
 
 export function Services() {
   return (
-    <section className="py-20 bg-white">
+    <section id="services" className="py-20 bg-white relative">
       {/* Section Title */}
       <div className="container mx-auto px-4 mb-12">
         <div className="text-center max-w-3xl mx-auto">
@@ -47,9 +47,7 @@ export function Services() {
             We Offer The Best Quality Service for You
           </h2>
           <p className="text-gray-600 text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-            convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
-            ante in maximus.
+            We provide comprehensive digital solutions tailored to your business needs. From web development to digital marketing, our team of experts delivers high-quality services that drive growth and innovation.
           </p>
         </div>
       </div>
@@ -59,9 +57,9 @@ export function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-8 rounded-lg bg-gray-50 shadow-md hover:shadow-xl transition-shadow duration-300"
+              className="p-6 md:p-8 rounded-lg bg-gray-50 shadow-md hover:shadow-xl transition-shadow duration-300"
             >
-              <img src={service.icon} alt="Icon" className="w-12 h-12 mb-6" />
+              <img src={service.icon} alt="Icon" className="w-10 h-10 md:w-12 md:h-12 mb-6" />
               <h4 className="text-xl font-semibold text-gray-800 mb-3">
                 {service.title}
               </h4>
@@ -70,6 +68,17 @@ export function Services() {
           ))}
         </div>
       </div>
+      {/* Shapes */}
+      <img
+        src="/images/shape-11.svg"
+        alt="shape"
+        className="absolute top-10 left-10 w-12 h-12 opacity-30 z-0 lg:top-20 lg:left-20 lg:w-16 lg:h-16"
+      />
+      <img
+        src="/images/shape-12.svg"
+        alt="shape"
+        className="absolute bottom-10 right-10 w-10 h-10 opacity-30 z-0 lg:bottom-20 lg:right-20 lg:w-14 lg:h-14"
+      />
     </section>
   );
 }

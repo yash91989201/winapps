@@ -4,17 +4,37 @@ import { Label } from "@/components/ui/label";
 
 export function Contact() {
   return (
-    <section id="support" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-white relative">
+      {/* Shapes */}
+      <img
+        src="/images/shape-05.svg"
+        alt="shape"
+        className="absolute top-10 left-10 w-12 h-12 opacity-30 z-0 lg:top-20 lg:left-20 lg:w-16 lg:h-16"
+      />
+      <img
+        src="/images/shape-06.svg"
+        alt="shape"
+        className="absolute top-10 right-10 w-10 h-10 opacity-30 z-0 lg:top-20 lg:right-20 lg:w-14 lg:h-14"
+      />
+      <img
+        src="/images/shape-07.svg"
+        alt="shape"
+        className="absolute bottom-10 left-10 w-14 h-14 opacity-30 z-0 lg:bottom-20 lg:left-20 lg:w-18 lg:h-18 animate-spin-slow"
+      />
+      <img
+        src="/images/shape-08.svg"
+        alt="shape"
+        className="absolute bottom-10 right-10 w-12 h-12 opacity-30 z-0 lg:bottom-20 lg:right-20 lg:w-16 lg:h-16"
+      />
       {/* Section Title */}
       <div className="container mx-auto px-4 mb-12">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Let’s Stay Connected
+            Contact Us
           </h2>
           <p className="text-gray-600 text-lg">
-            It is a long established fact that a reader will be distracted by
-            readable content of a page when looking at its layout. The point of
-            using.
+            We are here to help you with any questions you may have. Please feel
+            free to contact us.
           </p>
         </div>
       </div>
@@ -22,7 +42,7 @@ export function Contact() {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Info */}
-          <div className="space-y-8 p-8 rounded-lg bg-gray-50 shadow-md">
+          <div className="space-y-8 p-6 md:p-8 rounded-lg bg-gray-50 shadow-md">
             <div className="space-y-6">
               <div>
                 <h4 className="text-lg font-semibold text-gray-800 mb-2">
@@ -30,41 +50,21 @@ export function Contact() {
                 </h4>
                 <p>
                   <a
-                    href="mailto:support@startup.com"
+                    href="mailto:support@winapps.com"
                     className="text-primary hover:underline"
-                  >
-                    support@startup.com
-                  </a>
+                  > sales@winapps.co.in</a>
                 </p>
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                  Office Location
-                </h4>
-                <p className="text-gray-600">
-                  76/A, Green valle, Califonia USA.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                  Phone Number
-                </h4>
-                <p>
-                  <a href="tel:+00987543433223" className="text-primary hover:underline">
-                    +009 8754 3433 223
-                  </a>
-                </p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                  Skype Email
+                  Microsoft Teams
                 </h4>
                 <p>
                   <a
-                    href="mailto:example@yourmail.com"
+                    href="skype:winapps.support?chat"
                     className="text-primary hover:underline"
                   >
-                    example@yourmail.com
+                    contractor.winapps
                   </a>
                 </p>
               </div>
@@ -77,7 +77,7 @@ export function Contact() {
               <ul className="flex gap-4">
                 <li>
                   <a
-                    href="#"
+                    href="https://www.facebook.com/pg/Winapps-PvtLtd-233477130147559/posts/"
                     className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                   >
                     <svg
@@ -91,7 +91,7 @@ export function Contact() {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/winapps_software/"
                     className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                   >
                     <svg
@@ -99,13 +99,13 @@ export function Contact() {
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616v.064c0 2.298 1.635 4.217 3.803 4.65-.4.108-.82.166-1.25.166-.307 0-.6-.03-.88-.084.63 1.901 2.445 3.288 4.6 3.325-1.712 1.343-3.879 2.148-6.227 2.148-.404 0-.79-.023-1.17-.067 2.22 1.423 4.86 2.25 7.73 2.25 9.284 0 14.376-7.699 14.376-14.376 0-.219 0-.437-.015-.654.986-.712 1.84-1.602 2.52-2.616z" />
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z" />
                     </svg>
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/company/winapps.co.in/posts/?feedView=all"
                     className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                   >
                     <svg
@@ -122,44 +122,34 @@ export function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="p-8 rounded-lg bg-gray-50 shadow-md">
+          <div className="p-6 md:p-8 rounded-lg bg-gray-50 shadow-md">
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <Label htmlFor="fullname">Full name</Label>
+                  <Label htmlFor="name">Name</Label>
                   <Input
                     type="text"
-                    id="fullname"
-                    placeholder="Devid Wonder"
+                    id="name"
+                    placeholder="John Doe"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="email">Email address</Label>
+                  <Label htmlFor="email">Email</Label>
                   <Input
                     type="email"
                     id="email"
-                    placeholder="example@gmail.com"
+                    placeholder="john.doe@example.com"
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="phone">Phone number</Label>
-                  <Input
-                    type="text"
-                    id="phone"
-                    placeholder="+009 3342 3432"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="subject">Subject</Label>
-                  <Input
-                    type="text"
-                    id="subject"
-                    placeholder="Type your subject"
-                  />
-                </div>
+              <div>
+                <Label htmlFor="subject">Subject</Label>
+                <Input
+                  type="text"
+                  id="subject"
+                  placeholder="Subject"
+                />
               </div>
 
               <div>
@@ -179,6 +169,6 @@ export function Contact() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 }

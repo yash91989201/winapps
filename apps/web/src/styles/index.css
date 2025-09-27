@@ -192,6 +192,10 @@ body {
     animation: fadeInUp 0.8s ease-out;
   }
 
+  .animate-spin-slow {
+    animation: spinSlow 20s linear infinite;
+  }
+
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -200,6 +204,15 @@ body {
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes spinSlow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
     }
   }
 }
