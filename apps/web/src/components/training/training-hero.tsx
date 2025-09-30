@@ -10,7 +10,7 @@ export function TrainingHero() {
               Professional Training Courses
             </h1>
             <p className="text-base md:text-lg text-gray-600 mb-8">
-              Enhance your skills with our comprehensive training programs in web development, mobile development, digital marketing, and more. Learn from industry experts and advance your career.
+              Enhance your skills with our comprehensive training programs in web development, mobile development, digital marketing, and more. Learn from industry experts and advance your career. AI Integration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg">Explore Courses</Button>

@@ -29,6 +29,72 @@ const trainingCourses = [
     logo: "/images/qa-testing.png",
     pdf: "qa-testing.pdf"
   },
+  {
+    name: "CMS Development",
+    description: "Build and manage content management systems with WordPress, Drupal, and custom solutions",
+    logo: "/images/cms.png",
+    pdf: "cms-training.pdf"
+  },
+  {
+    name: "Next.js Development",
+    description: "Modern React framework for server-side rendering and static site generation",
+    logo: "/images/nextjs.png",
+    pdf: "nextjs-training.pdf"
+  },
+  {
+    name: "Node.js Development",
+    description: "Server-side JavaScript development with Node.js, Express, and modern backend technologies",
+    logo: "/images/nodejs.png",
+    pdf: "nodejs-training.pdf"
+  },
+  {
+    name: "PHP Development",
+    description: "Server-side web development with PHP, Laravel, and modern PHP frameworks",
+    logo: "/images/php.png",
+    pdf: "php-training.pdf"
+  },
+  {
+    name: "Digital Marketing",
+    description: "Comprehensive digital marketing strategies including SEO, SEM, social media, and content marketing",
+    logo: "/images/digital-marketing.png",
+    pdf: "digital-marketing-training.pdf"
+  },
+  {
+    name: "AI Development",
+    description: "Artificial intelligence and machine learning development with Python, TensorFlow, and modern AI frameworks",
+    logo: "/images/ai.jpg",
+    pdf: "ai-training.pdf"
+  },
+  {
+    name: "Unity Development",
+    description: "Game development and interactive experiences using Unity engine and C# programming",
+    logo: "/images/unity.png",
+    pdf: "unity-training.pdf"
+  },
+  {
+    name: ".NET MAUI Development",
+    description: "Cross-platform mobile app development using .NET MAUI framework for Android, iOS, and Windows",
+    logo: "/images/dotnet.png",
+    pdf: "maui-training.pdf"
+  },
+  {
+    name: "iOS Development",
+    description: "Native iOS application development using Swift, SwiftUI, and Apple's development tools",
+    logo: "/images/ios.png",
+    pdf: "ios-training.pdf"
+  },
+  {
+    name: "Flutter Development",
+    description: "Cross-platform mobile app development using Flutter framework and Dart programming language",
+    logo: "/images/flutter.png",
+    pdf: "flutter-training.pdf"
+  },
+  {
+    name: "Data Science",
+    description: "Comprehensive data science training including Python, R, statistical analysis, and machine learning",
+    logo: "/images/data-science.jpg",
+    pdf: "data-science-training.pdf"
+  },
 ];
 
 export function TrainingCourses() {
@@ -96,7 +162,7 @@ export function TrainingCourses() {
                 <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                Download PDF
+                Download Syllabus
               </div>
             </div>
           ))}

@@ -9,7 +9,7 @@ import {
 
 export function CTA() {
   return (
-    <section className="py-20 relative bg-primary text-white overflow-hidden">
+    <section className="py-10 relative bg-primary text-white overflow-hidden">
       {/* Background Shapes */}
       <div className="absolute -top-10 -left-10 w-40 h-40 bg-white/10 rounded-full" />
       <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full" />

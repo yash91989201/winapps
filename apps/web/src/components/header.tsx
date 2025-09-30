@@ -29,6 +29,7 @@ export default function Header() {
   };
 
   const homeLinks = [
+    { to: "#hero", label: "Home" },
     { to: "#about", label: "About" },
     { to: "#services", label: "Services" },
     { to: "#technologies", label: "Technologies" },
@@ -42,8 +43,8 @@ export default function Header() {
       )}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="flex items-center gap-2 group"
             onClick={(e) => {
               if (window.location.pathname === "/") {
@@ -56,9 +57,9 @@ export default function Header() {
             }}
           >
             <div className="relative overflow-hidden rounded-lg">
-              <img 
-                src="/header-logo.gif" 
-                alt="Logo" 
+              <img
+                src="/header-logo.gif"
+                alt="Logo"
                 className="size-16 group-hover:size-20 transition-all duration-300 relative z-10"
                 style={{
                   animationPlayState: 'paused',
@@ -71,46 +72,47 @@ export default function Header() {
               />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500 z-20"></div>
             </div>
-            <span className="font-bold text-xl group-hover:text-2xl transition-all duration-300">Winapps</span>
+            <span className="text-primary font-bold text-xl group-hover:text-2xl transition-all duration-300">Winapps</span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6">
+          <nav className="text-primary hidden md:flex items-center gap-6">
+            <button
+              onClick={() => scrollToSection("#hero")}
+              className="p-3 py-1.5  font-medium text-primary transition-colors hover:bg-amber-500 rounded-full"
+            >
+              Home
+            </button>
             <button
               onClick={() => scrollToSection("#about")}
-              className="font-medium text-foreground/80 hover:text-primary transition-colors"
+              className="font-medium text-primary transition-colors hover:bg-amber-500 rounded-full px-3 py-1.5"
             >
               About
             </button>
             <button
-              onClick={() => scrollToSection("#services")}
-              className="font-medium text-foreground/80 hover:text-primary transition-colors"
-            >
-              Services
-            </button>
-            <button
               onClick={() => scrollToSection("#technologies")}
-              className="font-medium text-foreground/80 hover:text-primary transition-colors"
+              className="font-medium text-primary transition-colors hover:bg-amber-500 rounded-full px-3 py-1.5"
             >
               Technologies
             </button>
             <button
+              onClick={() => scrollToSection("#services")}
+              className="font-medium text-primary transition-colors hover:bg-amber-500 rounded-full px-3 py-1.5 "
+            >
+              Services
+            </button>
+            <button
               onClick={() => scrollToSection("#contact")}
-              className="font-medium text-foreground/80 hover:text-primary transition-colors"
+              className="font-medium text-primary transition-colors hover:bg-amber-500 rounded-full px-3 py-1.5"
             >
               Contact
             </button>
-            <Link
-              to="/about"
-              className="font-medium text-foreground/80 hover:text-primary transition-colors"
-            >
-              About Us
-            </Link>
-            <Link
-              to="/training"
-              className="font-medium text-foreground/80 hover:text-primary transition-colors"
+            <a href="/training#training-courses"
+
+
+              className="font-medium text-primary transition-colors hover:bg-amber-500 rounded-full px-3 py-1.5"
             >
               Training
-            </Link>
+            </a>
           </nav>
 
           <div className="md:hidden">
@@ -150,7 +152,6 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-background/80 backdrop-blur-sm">
           <nav className="flex flex-col items-center gap-4 py-4">
-            <div className="font-medium text-lg mb-2">Home</div>
             {homeLinks.map(({ to, label }) => (
               <button
                 key={to}

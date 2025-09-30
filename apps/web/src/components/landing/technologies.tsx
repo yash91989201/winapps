@@ -69,6 +69,11 @@ const technologies = [
     description: "Powerful game development engine for creating 2D, 3D, VR, and AR experiences",
     logo: "/images/unity.png",
   },
+  {
+    name: "AI Implementation",
+    description: "Artificial intelligence solutions for automation, data analysis, and intelligent decision-making",
+    logo: "/images/ai.jpg"
+  },
 ];
 
 export function Technologies() {

@@ -36,9 +36,12 @@ export function About() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
               We Make Our customers happy by giving Best services.
             </h2>
-            <p className="text-gray-600 text-lg">
-              With over a decade of experience in software development, we have successfully delivered hundreds of projects across various industries. Our commitment to quality, innovation, and customer satisfaction has made us a trusted partner for businesses seeking digital transformation.
+
+            <p className="text-lg leading-relaxed">
+              Winapps is a professional services Company that specializes in two business areas – Technology and Product Development. We are a global provider of innovative, professional quality and cost-effective web development and internet marketing services. We have been re-inventing, re-vitalizing and re-engineering businesses around the world with high-quality technology-enabled resources and visions.
+              Our expertise spans a wide range of industries and we are powered by a team of over 20+ professionally experienced people who believe in Quality, Value, Growth, Teamwork and Customer Delight. With strategic initiatives and transformational ideas, we are committed to uphold our clients businesses in this constantly changing market place. We thrive in an environment where perfection is the buzzword and change is regular; therefore we are furnished with the latest in technological skills to provide the best possible solutions on-time and within budget.
             </p>
+
 
             <Dialog>
               <DialogTrigger asChild>

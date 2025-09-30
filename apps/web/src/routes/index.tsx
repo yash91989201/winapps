@@ -29,10 +29,10 @@ function HomeComponent() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <About />
       <Team />
-      <Services />
+      <About />
       <Technologies />
+      <Services />
       <Contact />
       <CTA />
     </div>

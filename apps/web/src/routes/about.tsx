@@ -10,7 +10,7 @@ function AboutComponent() {
     <div className="min-h-screen">
       <AboutHero />
 
-      <div className="py-16">
+      <div >
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid gap-12 items-center mb-16">
@@ -18,9 +18,6 @@ function AboutComponent() {
                 <h1 className="text-4xl font-bold mb-6">About Us</h1>
 
                 <div className="space-y-4">
-                  <p className="text-lg leading-relaxed">
-                    Winapps is a professional services Company that specializes in two business areas – Technology and Product Development. We are a global provider of innovative, professional quality and cost-effective web development and internet marketing services. We have been re-inventing, re-vitalizing and re-engineering businesses around the world with high-quality technology-enabled resources and visions.
-                  </p>
 
                   <p className="text-lg leading-relaxed">
                     Our expertise spans a wide range of industries and we are powered by a team of over 20+ professionally experienced people who believe in Quality, Value, Growth, Teamwork and Customer Delight. With strategic initiatives and transformational ideas, we are committed to uphold our clients businesses in this constantly changing market place. We thrive in an environment where perfection is the buzzword and change is regular; therefore we are furnished with the latest in technological skills to provide the best possible solutions on-time and within budget.

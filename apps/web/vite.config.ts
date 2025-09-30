@@ -11,4 +11,12 @@ export default defineConfig({
 			"@": path.resolve(__dirname, "./src"),
 		},
 	},
+	server: {
+		host: true, // Allow access from network
+		port: 3001,
+	},
+	preview: {
+		host: true,
+		port: 4173,
+	},
 });
