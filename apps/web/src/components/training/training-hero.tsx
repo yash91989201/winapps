@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 
 export function TrainingHero() {
   return (
@@ -13,7 +13,9 @@ export function TrainingHero() {
               Enhance your skills with our comprehensive training programs in web development, mobile development, digital marketing, and more. Learn from industry experts and advance your career. AI Integration.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg">Explore Courses</Button>
+              <a href="/training#training-courses" className={buttonVariants({ size: "lg" })}>
+                Explore Courses
+              </a>
             </div>
           </div>
           <div className="lg:w-1/2 relative hidden lg:flex justify-center items-center">
