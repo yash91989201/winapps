@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row md:justify-between gap-8 pb-4">
           {/* About */}
           <div className="space-y-4 md:w-2/5 lg:w-1/5">
-            <Link to="/" className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-2" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <div className="bg-white p-1 rounded">
                 <img src="/logo.webp" alt="Logo" className="h-8" />
               </div>
