@@ -1,6 +1,11 @@
 import { Link } from "@tanstack/react-router";
+import { useLocation } from "@tanstack/react-router";
 
 export default function Footer() {
+  const pathname = useLocation({
+    select: (location) => location.pathname,
+  });
+
   return (
     <footer className="bg-gray-900 text-white py-6">
       <div className="container mx-auto px-4">
@@ -44,11 +49,21 @@ export default function Footer() {
                   sales@winapps.co.in
                 </a>
               </li>
-              <li>
-                <a href="skype:winapps.support?chat" className="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer">
-                  contractor.winapps
-                </a>
-              </li>
+              {pathname === '/training' && (
+                <>
+                  <li>
+                    <a href="mailto:training@winapps.co.in" className="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer">
+                      training@winapps.co.in
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="mailto:info@winapps.co.in" className="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer">
+                      info@winapps.co.in
+                    </a>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
 
