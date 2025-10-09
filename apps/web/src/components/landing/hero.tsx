@@ -14,7 +14,7 @@ export function Hero() {
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-              We specialize in UI/UX, Software Development, AI Development.
+              We specialize in UI/UX, Software, Mobile Apps, AI Development.
             </h1>
             <p className="text-base md:text-lg text-gray-600 mb-8">
               Our moto is to "Materialize Concepts". Ideas are put into reality with a team of not only efficient dedicated persons but also of positive attitude professionals.
@@ -39,7 +39,7 @@ export function Hero() {
                         Winapps is a leading software development company based in Karnal. They specialize in building high-quality, end-to-end products for their clients, with a strong focus on software quality. Their skilled and trained team is dedicated to providing bug-free services and ensuring on-time delivery within budget.
                       </p>
                       <p>
-                        Winapps excels in both technology and product development, offering innovative and cost-effective web development and internet marketing services globally. They have a strong commitment to their clients, striving to deliver accurate and flawless solutions that help businesses flourish.
+                        Winapps excels in both technology and product development, offering innovative and cost-effective web development, mobile development and internet marketing services globally. They have a strong commitment to their clients, striving to deliver accurate and flawless solutions that help businesses flourish.
                       </p>
                       <p>
                         With structured partnerships and rigorous product engineering methods, Winapps guarantees quality, cost savings, and visibility throughout the product development life cycle. As an outsourcing partner, they bring significant improvements to existing business processes by leveraging their domain expertise.
@@ -48,7 +48,7 @@ export function Hero() {
                         Winapps also offers customized website design solutions, comprehensive web development services, and top-notch digital marketing services in Haryana. They validate and verify software applications to ensure a smooth user experience and avoid costly rework.
                       </p>
                       <p>
-                        Additionally, Winapps provides game development services for various platforms and expertise in PHP, .NET, e-commerce, and cloud computing.
+                        Additionally, Winapps provides game development, AI development services for various platforms and expertise in PHP, Android, IOS development, .NET, e-commerce, and cloud computing.
                       </p>
                     </div>
 
