@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -15,7 +14,7 @@ export function Hero() {
         <div className="flex flex-col lg:flex-row items-center justify-between">
           <div className="lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-              We specialize in UI/UX, Software Development, AI Integrations.
+              We specialize in UI/UX, Software Development, AI Development.
             </h1>
             <p className="text-base md:text-lg text-gray-600 mb-8">
               Our moto is to "Materialize Concepts". Ideas are put into reality with a team of not only efficient dedicated persons but also of positive attitude professionals.
