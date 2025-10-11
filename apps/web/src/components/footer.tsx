@@ -44,11 +44,24 @@ export default function Footer() {
           <div className="md:w-1/5">
             <h4 className="font-semibold text-lg mb-4">Contact</h4>
             <ul className="space-y-2">
-              <li>
-                <a href="mailto:sales@winapps.co.in" className="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer">
-                  sales@winapps.co.in
-                </a>
-              </li>
+              {
+                pathname === "/" && (
+                  <>
+                    <li>
+                      <a href="mailto:sales@winapps.co.in" className="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer">
+                        sales@winapps.co.in
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="skype:winapps.support?chat"
+                        className="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer">
+                        contractor.winapps
+                      </a>
+                    </li>
+                  </>
+                )
+              }
               {pathname === '/training' && (
                 <>
                   <li>
