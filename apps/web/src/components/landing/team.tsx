@@ -28,7 +28,7 @@ const teamMembers = [
   {
     name: "Milind Gujwar",
     role: "Business Development Executive",
-    image: "/images/team-03.png",
+    image: "/images/team-03.jpg",
     social: {
       linkedin: "https://www.linkedin.com/in/milind-gujwar-439b3127a",
     },
@@ -36,7 +36,7 @@ const teamMembers = [
   {
     name: "Shreya Vishwakarma",
     role: "Business Development Executive",
-    image: "/images/team-04.jpg",
+    image: "/images/team-04.jpeg",
     social: {
       linkedin: "https://www.linkedin.com/in/shreya-vishwakarma-80ab3b327/",
     },
