@@ -1,37 +1,67 @@
+import { Linkedin } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+import { useEffect, useState } from "react";
+import Autoplay from "embla-carousel-autoplay";
+
 const teamMembers = [
   {
-    name: "Olivia Andrium",
-    role: "Product Manager",
-    image: "/images/team-01.png",
+    name: "Balvinder Singh",
+    role: "CTO",
+    image: "/images/team-01.jpg",
     social: {
-      facebook: "#",
-      twitter: "#",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/balvinder-singh-443b7846/",
     },
   },
   {
-    name: "Jemse Kemorun",
-    role: "Product Designer",
-    image: "/images/team-02.png",
+    name: "Tripti Sangal",
+    role: "Human Resource",
+    image: "/images/team-02.jpg",
     social: {
-      facebook: "#",
-      twitter: "#",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/tripti-sangal-729443118?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B9MSi2O7yStGkMUimjXsmXw%3D%3D",
     },
   },
   {
-    name: "Avi Pestarica",
-    role: "Web Designer",
+    name: "Milind Gujwar",
+    role: "Business Development Executive",
     image: "/images/team-03.png",
     social: {
-      facebook: "#",
-      twitter: "#",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/milind-gujwar-439b3127a",
+    },
+  },
+  {
+    name: "Shreya Vishwakarma",
+    role: "Business Development Executive",
+    image: "/images/team-04.jpg",
+    social: {
+      linkedin: "https://www.linkedin.com/in/shreya-vishwakarma-80ab3b327/",
     },
   },
 ];
 
 export function Team() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    const onSelect = () => {
+      setCurrent(api.selectedScrollSnap());
+    };
+
+    api.on("select", onSelect);
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api]);
+
   return (
     <section className="py-20 bg-gray-100 relative">
       <div className="container mx-auto px-4">
@@ -44,49 +74,57 @@ export function Team() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {teamMembers.map((member, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-lg shadow-md overflow-hidden text-center hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="relative">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-64 md:h-80 object-cover"
-                />
-                <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex gap-4">
-                    <a
-                      href={member.social.facebook}
-                      className="text-white hover:text-primary transition-colors"
-                    >
-                      <img src="/images/icon-facebook.svg" alt="facebook" className="w-6 h-6" />
-                    </a>
-                    <a
-                      href={member.social.twitter}
-                      className="text-white hover:text-primary transition-colors"
-                    >
-                      <img src="/images/icon-twitter.svg" alt="twitter" className="w-6 h-6" />
-                    </a>
-                    <a
-                      href={member.social.linkedin}
-                      className="text-white hover:text-primary transition-colors"
-                    >
-                      <img src="/images/icon-linkedin.svg" alt="linkedin" className="w-6 h-6" />
-                    </a>
+        <div className="max-w-5xl mx-auto">
+          <Carousel
+            className="w-full"
+            opts={{
+              align: "start",
+              loop: true,
+              slidesToScroll: 1,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 3000,
+                stopOnMouseEnter: true,
+                stopOnInteraction: false,
+              }),
+            ]}
+            setApi={setApi}
+          >
+            <CarouselContent>
+              {teamMembers.map((member, index) => (
+                <CarouselItem key={index} className="md:basis-1/3">
+                  <div className="group bg-white rounded-lg shadow-md overflow-hidden text-center hover:shadow-xl transition-shadow duration-300">
+                    <div className="relative">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-64 md:h-72 object-cover"
+                      />
+                      <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="flex gap-4">
+                          <a
+                            href={member.social.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-white bg-[#0077B5] hover:bg-[#005885] transition-colors rounded-full p-3"
+                          >
+                            <Linkedin className="w-6 h-6" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-4 md:p-6">
+                      <h4 className="text-xl font-semibold text-gray-800 mb-1">
+                        {member.name}
+                      </h4>
+                      <p className="text-gray-600">{member.role}</p>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="p-4 md:p-6">
-                <h4 className="text-xl font-semibold text-gray-800 mb-1">
-                  {member.name}
-                </h4>
-                <p className="text-gray-600">{member.role}</p>
-              </div>
-            </div>
-          ))}
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
       {/* Shapes */}

@@ -49,14 +49,14 @@ export default function Footer() {
                   <>
                     <li>
                       <a href="mailto:sales@winapps.co.in" className="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer">
-                        sales@winapps.co.in
+                        sales@winapps.co.in (E-mail)
                       </a>
                     </li>
                     <li>
                       <a
                         href="skype:winapps.support?chat"
                         className="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer">
-                        contractor.winapps
+                        contractor.winapps (Microsoft Teams)
                       </a>
                     </li>
                   </>
@@ -66,13 +66,13 @@ export default function Footer() {
                 <>
                   <li>
                     <a href="mailto:training@winapps.co.in" className="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer">
-                      training@winapps.co.in
+                      training@winapps.co.in (E-mail)
                     </a>
                   </li>
 
                   <li>
                     <a href="mailto:info@winapps.co.in" className="text-gray-400 hover:text-white" target="_blank" rel="noopener noreferrer">
-                      info@winapps.co.in
+                      info@winapps.co.in (E-mail)
                     </a>
                   </li>
                 </>
